@@ -27,6 +27,20 @@ class URaylibPCGMapBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "RaylibPCGMap sample test testing"), Category = "RaylibPCGMapTesting")
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
 	static float RaylibPCGMapSampleFunction(float Param);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Generate Random Walk", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static float GenerateRandomWalk(int Steps);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Generate Cellular Automata", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static float GenerateCellularAutomata(int Iterations = 5);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Clear Grid", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static float ClearGrid();
+
+
+
+
+
 };
