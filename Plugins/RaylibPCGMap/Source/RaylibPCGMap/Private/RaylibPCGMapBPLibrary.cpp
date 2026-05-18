@@ -14,3 +14,19 @@ float URaylibPCGMapBPLibrary::RaylibPCGMapSampleFunction(float Param)
 	return -1;
 }
 
+void URaylibPCGMapBPLibrary::GenerateRandomWalk(int Steps) 
+{
+    ClearGrid();
+   
+}
+
+void URaylibPCGMapBPLibrary::GenerateCellularAutomata(int Iterations)
+{
+    ClearGrid();
+    
+}
+
+void URaylibPCGMapBPLibrary::Regenerate()
+{
+    GenerateCellularAutomata(5);
+}

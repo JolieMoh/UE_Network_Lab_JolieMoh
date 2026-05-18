@@ -30,17 +30,29 @@ class URaylibPCGMapBPLibrary : public UBlueprintFunctionLibrary
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Execute Sample function", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
 	static float RaylibPCGMapSampleFunction(float Param);
 
+	// ===== PROCEDURAL GENERATION ALGORITHMS =====
+
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Generate Random Walk", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
-	static float GenerateRandomWalk(int Steps);
+	static void GenerateRandomWalk(int Steps);
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Generate Cellular Automata", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
-	static float GenerateCellularAutomata(int Iterations = 5);
+	static void GenerateCellularAutomata(int Iterations = 5);
+
+	// ===== EDITOR FUNCTIONS =====
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Clear Grid", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
-	static float ClearGrid();
+	static void ClearGrid();
 
+	// ===== FILE I/O (Save/Load) =====
+	/*
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Save To File", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static bool SaveToFile(const Fstring& filename); // string is undefined???
 
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Load From File", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static bool LoadFromFile(const Fstring& filename); // string is undefined??? */
 
+	// ===== REGENERATE =====
 
-
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Regenerate Level", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
+	static void Regenerate();
 };
