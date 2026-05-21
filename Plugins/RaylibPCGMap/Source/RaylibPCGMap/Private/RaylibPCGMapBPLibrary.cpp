@@ -16,14 +16,17 @@ float URaylibPCGMapBPLibrary::RaylibPCGMapSampleFunction(float Param)
 
 void URaylibPCGMapBPLibrary::GenerateRandomWalk(int Steps) 
 {
-    ClearGrid();
    
 }
 
 void URaylibPCGMapBPLibrary::GenerateCellularAutomata(int Iterations)
 {
-    ClearGrid();
     
+}
+
+void URaylibPCGMapBPLibrary::ClearGrid()
+{
+
 }
 
 void URaylibPCGMapBPLibrary::Regenerate()
