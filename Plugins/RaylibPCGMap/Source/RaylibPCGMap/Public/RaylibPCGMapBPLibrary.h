@@ -44,12 +44,12 @@ class URaylibPCGMapBPLibrary : public UBlueprintFunctionLibrary
 	static void ClearGrid();
 
 	// ===== FILE I/O (Save/Load) =====
-	/*
+	
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Save To File", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
-	static bool SaveToFile(const Fstring& filename); // string is undefined???
+	static bool SaveToFile(const FString& filename); // string is undefined???
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Load From File", Keywords = "RaylibPCGMap"), Category = "RaylibPCGMapTesting")
-	static bool LoadFromFile(const Fstring& filename); // string is undefined??? */
+	static bool LoadFromFile(const FString& filename); // string is undefined???
 
 	// ===== REGENERATE =====
 
